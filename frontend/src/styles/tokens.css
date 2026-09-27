@@ -1,0 +1,124 @@
+:root {
+  /* Color — pulled from the Bhoomi Saathi mark: royal blue roof, marigold sun, terracotta fort stone */
+  --bs-blue-900: #12274A;
+  --bs-blue-700: #1E4C8A;
+  --bs-blue-500: #3E77C4;
+  --bs-blue-100: #E7EFFB;
+
+  --bs-gold-700: #B9740F;
+  --bs-gold-600: #E8A317;
+  --bs-gold-400: #F6C453;
+  --bs-gold-100: #FDF1D6;
+
+  --bs-terracotta-600: #C1701F;
+  --bs-terracotta-400: #D6923F;
+
+  --bs-red-600: #D6432E;
+
+  --bs-ink-900: #16233D;
+  --bs-ink-700: #3B4A63;
+  --bs-ink-500: #6B7893;
+
+  --bs-cream-50: #FFFDF9;
+  --bs-cream-100: #FBF3E2;
+  --bs-cream-200: #F5E8C9;
+
+  --bs-white: #FFFFFF;
+  --bs-green-600: #2F7D4F;
+
+  /* semantic — light mode default */
+  --bg: var(--bs-cream-50);
+  --bg-alt: var(--bs-cream-100);
+  --surface: var(--bs-white);
+  --surface-raised: var(--bs-white);
+  --border: #EADFC4;
+  --text-primary: var(--bs-ink-900);
+  --text-secondary: var(--bs-ink-700);
+  --text-muted: var(--bs-ink-500);
+  --accent: var(--bs-blue-700);
+  --accent-strong: var(--bs-blue-900);
+  --gold: var(--bs-gold-600);
+  --terracotta: var(--bs-terracotta-600);
+  --danger: var(--bs-red-600);
+  --success: var(--bs-green-600);
+  --shadow-color: 30 40 20% / 0.12;
+
+  /* type */
+  --font-hi-display: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
+  --font-hi-body: "Noto Sans Devanagari", "Inter", sans-serif;
+  --font-en-display: "Fraunces", "Noto Serif Devanagari", serif;
+  --font-en-body: "Inter", "Noto Sans Devanagari", sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --container-w: 1180px;
+}
+
+[data-theme="dark"] {
+  --bg: #0F1A2E;
+  --bg-alt: #142238;
+  --surface: #182741;
+  --surface-raised: #1D3050;
+  --border: #2A3D5E;
+  --text-primary: #F2EFE6;
+  --text-secondary: #C7D0E0;
+  --text-muted: #8B98B5;
+  --accent: #6E9EE0;
+  --accent-strong: #9CC0F2;
+  --gold: #F6C453;
+  --terracotta: #E0A15C;
+  --danger: #FF6B5B;
+  --success: #4FBF83;
+  --shadow-color: 0 0 0% / 0.4;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-hi-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[data-lang="en"] { font-family: var(--font-en-body); }
+
+h1, h2, h3, .display {
+  font-family: var(--font-hi-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0;
+}
+body[data-lang="en"] h1,
+body[data-lang="en"] h2,
+body[data-lang="en"] h3,
+body[data-lang="en"] .display {
+  font-family: var(--font-en-display);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+img { max-width: 100%; display: block; }
+
+::selection { background: var(--bs-gold-400); color: var(--bs-ink-900); }
+
+:focus-visible {
+  outline: 2.5px solid var(--bs-blue-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

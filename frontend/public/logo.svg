@@ -1,0 +1,53 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6C453"/>
+      <stop offset="55%" stop-color="#E8A317"/>
+      <stop offset="100%" stop-color="#C1701F"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C86D1"/>
+      <stop offset="100%" stop-color="#1E4C8A"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#FBF1DD"/>
+    </linearGradient>
+    <clipPath id="circleClip">
+      <circle cx="128" cy="128" r="122"/>
+    </clipPath>
+  </defs>
+
+  <!-- outer ring -->
+  <circle cx="128" cy="128" r="126" fill="url(#ringGrad)"/>
+  <circle cx="128" cy="128" r="120" fill="url(#bgGrad)"/>
+
+  <g clip-path="url(#circleClip)">
+    <!-- sun glow -->
+    <circle cx="128" cy="96" r="56" fill="url(#ringGrad)" opacity="0.16"/>
+
+    <!-- roof / house, centered -->
+    <g transform="translate(48,88)">
+      <path d="M80 0L160 54H140V128H20V54H0L80 0Z" fill="url(#roofGrad)"/>
+      <!-- door -->
+      <rect x="66" y="88" width="28" height="40" rx="2" fill="#FBF1DD"/>
+      <!-- window -->
+      <rect x="102" y="70" width="20" height="20" rx="2" fill="#FBF1DD" opacity="0.92"/>
+      <line x1="112" y1="70" x2="112" y2="90" stroke="#1E4C8A" stroke-width="2"/>
+      <line x1="102" y1="80" x2="122" y2="80" stroke="#1E4C8A" stroke-width="2"/>
+    </g>
+
+    <!-- location pin, upper right, marks the "spot" -->
+    <g transform="translate(150,44)">
+      <path d="M20 0C9 0 0 9 0 20c0 15 20 38 20 38s20-23 20-38C40 9 31 0 20 0z" fill="#D6432E"/>
+      <circle cx="20" cy="20" r="8.5" fill="#FFFDF9"/>
+    </g>
+
+    <!-- ground waves -->
+    <path d="M8 226 Q64 208 128 222 T248 218" stroke="#1E4C8A" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M8 236 Q64 220 128 232 T248 230" stroke="#E8A317" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- thin inner ring line for crispness -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#C1701F" stroke-width="1.5" opacity="0.35"/>
+</svg>

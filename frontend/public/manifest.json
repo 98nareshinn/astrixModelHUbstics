@@ -1,0 +1,14 @@
+{
+  "name": "Bhoomi Saathi — भूमि साथी",
+  "short_name": "Bhoomi Saathi",
+  "description": "Beawar, Rajasthan property, maps, news and home services platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFDF9",
+  "theme_color": "#FFFDF9",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/logo-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
